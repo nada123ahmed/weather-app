@@ -565,7 +565,7 @@ body {
     gap: 25px;
 }
 
-.contact-info-card .info-item {
+/* .contact-info-card .info-item {
     display: flex;
     align-items: flex-start; 
     gap: 15px;
@@ -581,8 +581,25 @@ body {
     margin: 0;
     color: var(--text-white);
     line-height: 1.6;
+} */
+.contact-info-card .info-item {
+    display: flex;
+    align-items: center; /* Use center for better vertical alignment */
+    gap: 20px; /* Increase gap slightly for more breathing room */
 }
 
+.contact-info-card .info-item i {
+    font-size: 1.5em;
+    color: var(--blue-highlight);
+    flex-shrink: 0; /* Prevents the icon from shrinking */
+}
+
+.contact-info-card .info-item p {
+    margin: 0;
+    color: var(--text-white);
+    line-height: 1.7; /* Improve line spacing */
+    font-size: 1.05em;
+}
 .contact-form-section {
     background-color: var(--card-bg-color);
     padding: 40px;
