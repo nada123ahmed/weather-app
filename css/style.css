@@ -460,7 +460,7 @@ body {
     }
 }
 
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
     .site-header {
         padding: 15px 0;
     }
@@ -507,7 +507,7 @@ body {
         padding: 12px 25px;
         font-size: 1em;
     }
-}
+} */
 
 
 .contact-hero {
@@ -649,4 +649,111 @@ body {
 
 .contact-form .submit-button:hover {
     background-color: #007bb6;
+}
+/* ==========================================================================
+   Responsive Media Queries
+   ========================================================================== */
+
+/* For Tablets and Small Laptops (أجهزة التابلت واللابتوب الصغيرة) */
+@media (max-width: 992px) {
+    /* Navbar is handled by Bootstrap's collapse plugin at this size */
+
+    /* Weather Cards: Change from 3 columns to 2 columns */
+    .weather-card {
+        width: 48%; /* Each card takes almost half the width */
+        min-width: 280px;
+    }
+
+    /* Contact Page: Allow elements to wrap naturally */
+    .contact-grid {
+        flex-direction: column; /* Stack vertically on tablets */
+        align-items: center;
+    }
+
+    .contact-info-card,
+    .contact-form-section {
+        width: 90%; /* Give them a consistent width */
+        min-width: unset;
+    }
+}
+
+
+/* For Large Mobiles and Small Tablets (أجهزة الموبايل الكبيرة والتابلت الصغيرة) */
+@media (max-width: 768px) {
+    .hero, .contact-hero {
+        padding: 60px 0;
+    }
+
+    .search-bar, .subscribe-form {
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Weather Cards: Change to 1 column */
+    .weather-card {
+        width: 90%; /* Full width for mobile */
+    }
+
+    /* Contact Form: Stack input fields vertically */
+    .contact-form .form-row {
+        flex-direction: column;
+        gap: 15px; /* Add space between stacked inputs */
+        margin-bottom: 15px;
+    }
+    
+    .contact-form textarea {
+        margin-bottom: 15px;
+    }
+
+    /* Footer: Stack content vertically */
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .subscribe-form {
+       width: 90%;
+       max-width: none;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}
+
+
+/* For Small Mobiles (أجهزة الموبايل الصغيرة) */
+@media (max-width: 480px) {
+    .navbar-brand.logo {
+        font-size: 1.5em; /* Make logo slightly smaller */
+    }
+
+    .hero, .contact-hero {
+        padding: 50px 0;
+    }
+
+    /* Adjust font sizes for readability */
+    .weather-card .temp-info span {
+        font-size: 3.5em;
+    }
+    .weather-card .forecast-temp {
+        font-size: 2.2em;
+    }
+    .contact-form-section h2 {
+        font-size: 1.8em;
+    }
+
+    /* Make form inputs and buttons slightly smaller */
+    .contact-form input,
+    .contact-form textarea {
+        padding: 12px 15px;
+        font-size: 0.95em;
+    }
+
+    .contact-form .submit-button {
+        padding: 12px 25px;
+        width: 100%; /* Make button full width for easier tapping */
+    }
 }
